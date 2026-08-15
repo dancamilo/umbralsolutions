@@ -25,8 +25,12 @@ window.addEventListener('resize', () => {
 });
 
 // ---------- Formulario de contacto ----------
+// Reemplaza esta URL por tu propio endpoint de Formspree (formspree.io -> New Form)
+const FORM_ENDPOINT = "https://formspree.io/f/mwlenlna";
+
 const form = document.getElementById('contactForm');
 const successMsg = document.getElementById('formSuccess');
+const submitBtn = form.querySelector('.submit-btn');
 
 function setError(fieldEl, hasError){
   const wrapper = fieldEl.closest('.field');
@@ -37,7 +41,19 @@ function isValidEmail(value){
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
-form.addEventListener('submit', (e) => {
+function showFormError(message){
+  successMsg.textContent = message;
+  successMsg.style.color = '#ff8a8a';
+  successMsg.classList.add('show');
+}
+
+function showFormSuccess(){
+  successMsg.textContent = '¡Gracias! Tu mensaje fue enviado, te contactaremos pronto.';
+  successMsg.style.color = '';
+  successMsg.classList.add('show');
+}
+
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const nombre = document.getElementById('nombre');
@@ -52,15 +68,39 @@ form.addEventListener('submit', (e) => {
   setError(correo, !correoValido);
   setError(asunto, !asuntoValido);
 
-  if (nombreValido && correoValido && asuntoValido) {
-    successMsg.classList.add('show');
-    form.reset();
-    document.querySelectorAll('.field.invalid').forEach(f => f.classList.remove('invalid'));
-
-    // Oculta el mensaje de éxito después de unos segundos
-    setTimeout(() => successMsg.classList.remove('show'), 6000);
-  } else {
+  if (!(nombreValido && correoValido && asuntoValido)) {
     successMsg.classList.remove('show');
+    return;
+  }
+
+  if (FORM_ENDPOINT.includes('TU_ENDPOINT_AQUI')) {
+    showFormError('Falta configurar el endpoint de Formspree en script.js.');
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Enviando...';
+
+  try {
+    const response = await fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      showFormSuccess();
+      form.reset();
+      document.querySelectorAll('.field.invalid').forEach(f => f.classList.remove('invalid'));
+    } else {
+      showFormError('No se pudo enviar el mensaje. Intenta de nuevo en un momento.');
+    }
+  } catch (err) {
+    showFormError('Error de conexión. Revisa tu internet e intenta de nuevo.');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Enviar mensaje →';
+    setTimeout(() => successMsg.classList.remove('show'), 7000);
   }
 });
 

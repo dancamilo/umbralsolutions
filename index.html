@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Umbral Solutions — Soluciones digitales</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -21,6 +21,7 @@
     </a>
 
     <div class="nav-links" id="navLinks">
+      <a href="#servicios">Servicios</a>
       <a href="#planes">Planes</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#contacto">Contacto</a>
@@ -159,11 +160,11 @@
 
       <div class="info-row">
         <span class="icon">✉</span>
-        <div><b>Correo</b><span>solutionsumbral@gmail.com</span></div>
+        <div><b>Correo</b><span>hola@umbralsolutions.com</span></div>
       </div>
       <div class="info-row">
         <span class="icon">☎</span>
-        <div><b>WhatsApp</b><span>+57 315 60 38 373</span></div>
+        <div><b>WhatsApp</b><span>+57 300 123 4567</span></div>
       </div>
       <div class="info-row">
         <span class="icon">⚲</span>
@@ -180,20 +181,20 @@
     <form id="contactForm" novalidate>
       <div class="form-row">
         <div class="field">
-          <input type="text" id="nombre" placeholder="Nombre" required>
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
           <span class="field-error" data-for="nombre">Escribe tu nombre.</span>
         </div>
         <div class="field">
-          <input type="email" id="correo" placeholder="Correo electrónico" required>
+          <input type="email" id="correo" name="email" placeholder="Correo electrónico" required>
           <span class="field-error" data-for="correo">Ingresa un correo válido.</span>
         </div>
       </div>
       <div class="field">
-        <input type="text" id="asunto" placeholder="Asunto" required>
+        <input type="text" id="asunto" name="asunto" placeholder="Asunto" required>
         <span class="field-error" data-for="asunto">Cuéntanos el asunto.</span>
       </div>
       <div class="field">
-        <textarea id="mensaje" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+        <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
       </div>
       <button type="submit" class="btn btn-solid submit-btn">Enviar mensaje →</button>
       <p class="secure-note">🔒 Tu información está segura con nosotros.</p>

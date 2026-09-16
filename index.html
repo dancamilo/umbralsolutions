@@ -1,112 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Umbral Solutions — Soluciones digitales</title>
+<meta name="description" content="Umbral Solutions — Páginas web a la medida de cada etapa de tu negocio, de landing a ecommerce. Bogotá, Colombia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<section class="testimonials" id="nosotros">
-  <div class="wrap">
+</head>
+<body>
 
-    <div class="section-head">
-      <div class="eyebrow">Nuestros proyectos</div>
-      <h2>Trabajo que cruza el umbral</h2>
-      <p>
-        Una selección de proyectos y experiencias digitales desarrolladas
-        para transformar ideas en presencia digital.
-      </p>
+<!-- custom cursor -->
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="#" aria-label="Umbral Solutions — inicio">
+      <span class="logo-mark">
+        <svg viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M20,116 L20,54 A30,30 0 0 1 80,54 L80,116" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+          <path d="M40,116 L40,44 A24,24 0 0 1 88,44 L88,108" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="logo-text"><b>UMBRAL</b><span>SOLUTIONS</span></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#planes">Planes</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <a href="#contacto" class="btn btn-solid nav-cta"><span>Cotizar</span> <span class="arrow">→</span></a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     HERO — el umbral
+     ============================================================ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+
+    <div class="hero-copy">
+      <div class="eyebrow reveal">Soluciones digitales — Umbral Solutions</div>
+      <h1 aria-label="Cruza el umbral hacia tu presencia digital">
+        <span class="line"><span class="reveal" data-d="1">Cruza el <em>umbral</em></span></span>
+        <span class="line"><span class="reveal" data-d="2">hacia tu</span></span>
+        <span class="line"><span class="reveal" data-d="3"><em>presencia digital</em></span></span>
+      </h1>
+      <p class="lead reveal" data-d="3">Páginas web a la medida de cada etapa de tu negocio, de landing a ecommerce.</p>
+      <div class="hero-actions reveal" data-d="4">
+        <a href="#planes" class="btn"><span>Ver planes</span></a>
+        <a href="#contacto" class="btn btn-solid"><span>Conversemos</span> <span class="arrow">→</span></a>
+      </div>
+      <div class="hero-meta reveal" data-d="4">
+        <span>Bogotá <i aria-hidden="true"></i> Colombia</span>
+        <span>Web <i aria-hidden="true"></i> Ecommerce <i aria-hidden="true"></i> A medida</span>
+      </div>
     </div>
 
-    <div class="t-cards">
-
-      <!-- Proyecto 01 -->
-      <div class="t-card">
-        <div class="t-top">
-          <span class="quote-mark">01</span>
-          <span class="stars">VOYNICH</span>
-        </div>
-
-        <p>
-          Diseño y desarrollo de la identidad digital de VOYNICH, una marca
-          conceptual de vehículos premium. Una experiencia cinematográfica
-          enfocada en transmitir exclusividad, innovación y tecnología.
-        </p>
-
-        <div class="t-person">
-          <div class="avatar">V</div>
-          <div>
-            <b>VOYNICH</b>
-            <span>Automotive · Concept Brand</span>
-          </div>
-        </div>
-
-        <a
-          href="https://dancamilo.github.io/Voynich/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="project-link"
-        >
-          Ver proyecto →
-        </a>
+    <!-- abstract threshold object -->
+    <div class="scene" id="scene" aria-hidden="true">
+      <div class="portal" id="portal">
+        <div class="frame f5"></div>
+        <div class="frame f4"></div>
+        <div class="frame f3"></div>
+        <div class="frame f2"></div>
+        <div class="frame f1"></div>
+        <div class="gate"></div>
+        <div class="shard s1"></div>
+        <div class="shard s2"></div>
       </div>
+    </div>
 
+  </div>
+  <div class="scroll-hint" aria-hidden="true">Cruza el umbral</div>
+</section>
 
-      <!-- Proyecto 02 -->
-      <div class="t-card">
-        <div class="t-top">
-          <span class="quote-mark">02</span>
-          <span class="stars">UMBRAL</span>
-        </div>
+<!-- ============================================================
+     POSITIONING
+     ============================================================ -->
+<section class="statement-sec">
+  <div class="wrap">
+    <div class="eyebrow reveal">Qué hacemos</div>
+    <p class="statement reveal" data-d="1" style="margin-top:1.6rem">
+      Diseñamos experiencias digitales que <em>convierten</em>.
+    </p>
+    <p class="statement-sub reveal" data-d="2">
+      Sitios web <b>modernos, rápidos y funcionales</b> pensados para hacer crecer tu
+      negocio — desde la primera landing hasta una tienda online completa.
+    </p>
+  </div>
+</section>
 
-        <p>
-          Desarrollo de la experiencia digital de Umbral Solutions, diseñada
-          para presentar servicios de desarrollo web de forma clara,
-          profesional y atractiva, con un enfoque en conversión y presencia
-          de marca.
-        </p>
+<!-- ============================================================
+     SERVICES
+     ============================================================ -->
+<section class="services" id="servicios">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow reveal">Nuestros servicios</div>
+      <h2 class="reveal" data-d="1" style="margin-top:1.2rem">Un umbral por<br>cada necesidad</h2>
+      <p class="reveal" data-d="2">Soluciones digitales a la medida, para que tu negocio cruce al siguiente nivel.</p>
+    </div>
 
-        <div class="t-person">
-          <div class="avatar">U</div>
-          <div>
-            <b>UMBRAL SOLUTIONS</b>
-            <span>Digital Agency · Web Development</span>
-          </div>
-        </div>
-
-        <a
-          href="https://dancamilo.github.io/umbralsolutions/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="project-link"
-        >
-          Ver proyecto →
-        </a>
+    <div class="service reveal">
+      <span class="s-num">01</span>
+      <div>
+        <div class="s-title">Páginas web</div>
+        <p class="s-desc">Sitios modernos, rápidos y responsives que presentan tu negocio y convierten visitas en contactos.</p>
       </div>
+      <span class="s-arrow">↗</span>
+    </div>
 
-
-      <!-- Proyecto 03 -->
-      <div class="t-card">
-        <div class="t-top">
-          <span class="quote-mark">03</span>
-          <span class="stars">PORTFOLIO</span>
-        </div>
-
-        <p>
-          Portafolio digital desarrollado para presentar proyectos,
-          experiencia y soluciones digitales, combinando una interfaz
-          moderna con una navegación clara y una identidad visual propia.
-        </p>
-
-        <div class="t-person">
-          <div class="avatar">P</div>
-          <div>
-            <b>PORTAFOLIO</b>
-            <span>Web Design · Development · Projects</span>
-          </div>
-        </div>
-
-        <a
-          href="#"
-          class="project-link"
-        >
-          Ver proyecto →
-        </a>
+    <div class="service reveal">
+      <span class="s-num">02</span>
+      <div>
+        <div class="s-title">Tiendas online</div>
+        <p class="s-desc">Ecommerce con pasarelas de pago, reservas y funciones pensadas para vender en línea.</p>
       </div>
+      <span class="s-arrow">↗</span>
+    </div>
 
+    <div class="service reveal">
+      <span class="s-num">03</span>
+      <div>
+        <div class="s-title">Diseño a medida</div>
+        <p class="s-desc">Identidad y experiencia digital construidas alrededor de tu marca, tus objetivos y tu etapa.</p>
+      </div>
+      <span class="s-arrow">↗</span>
+    </div>
+
+    <div class="service reveal">
+      <span class="s-num">04</span>
+      <div>
+        <div class="s-title">Soporte técnico</div>
+        <p class="s-desc">Acompañamiento continuo para que tu presencia digital siga funcionando y creciendo.</p>
+      </div>
+      <span class="s-arrow">↗</span>
     </div>
   </div>
 </section>
+
+<!-- ============================================================
+     PLANS
+     ============================================================ -->
+<section class="plans" id="planes">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow reveal">Planes</div>
+      <h2 class="reveal" data-d="1" style="margin-top:1.2rem">El plan ideal para cada<br>etapa de tu proyecto</h2>
+    </div>
+
+    <div class="plan-cards">
+      <div class="plan-card reveal">
+        <div class="plan-icon">01 —</div>
+        <h3>Esencial</h3>
+        <p>Landing page y presencia digital básica.</p>
+        <ul class="plan-list">
+          <li>Diseño responsive</li>
+          <li>Información de tu negocio</li>
+          <li>Formulario de contacto</li>
+          <li>Integración con redes sociales</li>
+          <li>Optimización básica SEO</li>
+        </ul>
+        <div class="plan-tag">Ideal para empezar</div>
+      </div>
+
+      <div class="plan-card featured reveal" data-d="1">
+        <span class="badge">Más elegido</span>
+        <div class="plan-icon">02 —</div>
+        <h3>Profesional</h3>
+        <p>Sitio completo con blog, formularios y analítica.</p>
+        <ul class="plan-list">
+          <li>Todo lo del plan Esencial</li>
+          <li>Blog administrable</li>
+          <li>Formularios avanzados</li>
+          <li>Analítica de visitas</li>
+          <li>SEO avanzado</li>
+          <li>Integración con herramientas</li>
+        </ul>
+        <div class="plan-tag">Para empresas establecidas</div>
+      </div>
+
+      <div class="plan-card reveal" data-d="2">
+        <div class="plan-icon">03 —</div>
+        <h3>Premium</h3>
+        <p>Ecommerce, reservas y funciones a medida.</p>
+        <ul class="plan-list">
+          <li>Todo lo del plan Profesional</li>
+          <li>Tienda online</li>
+          <li>Pasarelas de pago</li>
+          <li>Reservas y citas</li>
+          <li>Funciones personalizadas</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <div class="plan-tag">Soluciones específicas</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PORTFOLIO — proyectos que cruzaron el umbral
+     ============================================================ -->
+<section class="work" id="proyectos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow reveal">Nuestros proyectos</div>
+      <h2 class="reveal" data-d="1" style="margin-top:1.2rem">Trabajo que cruza<br>el umbral</h2>
+      <p class="reveal" data-d="2">Una selección de proyectos y experiencias digitales desarrolladas para transformar ideas en presencia digital.</p>
+    </div>
+
+    <article class="case reveal">
+      <div class="case-visual" aria-hidden="true"><div class="monogram">V</div></div>
+      <div class="case-body">
+        <div class="case-idx">PROYECTO — 01</div>
+        <h3>VOYNICH</h3>
+        <p>Diseño y desarrollo de la identidad digital de VOYNICH, una marca conceptual de vehículos premium. Una experiencia cinematográfica enfocada en transmitir exclusividad, innovación y tecnología.</p>
+        <div class="case-tags"><span>Automotive</span><span>Concept Brand</span><span>Identidad digital</span></div>
+        <a href="https://dancamilo.github.io/Voynich/" target="_blank" rel="noopener noreferrer" class="case-link">Ver proyecto <span class="arrow">→</span></a>
+      </div>
+    </article>
+
+    <article class="case reveal">
+      <div class="case-visual" aria-hidden="true"><div class="monogram">U</div></div>
+      <div class="case-body">
+        <div class="case-idx">PROYECTO — 02</div>
+        <h3>UMBRAL SOLUTIONS</h3>
+        <p>Desarrollo de la experiencia digital de Umbral Solutions, diseñada para presentar servicios de desarrollo web de forma clara, profesional y atractiva, con un enfoque en conversión y presencia de marca.</p>
+        <div class="case-tags"><span>Digital Agency</span><span>Web Development</span></div>
+        <a href="https://dancamilo.github.io/umbralsolutions/" target="_blank" rel="noopener noreferrer" class="case-link">Ver proyecto <span class="arrow">→</span></a>
+      </div>
+    </article>
+
+    <article class="case reveal">
+      <div class="case-visual" aria-hidden="true"><div class="monogram">P</div></div>
+      <div class="case-body">
+        <div class="case-idx">PROYECTO — 03</div>
+        <h3>PORTAFOLIO</h3>
+        <p>Portafolio digital desarrollado para presentar proyectos, experiencia y soluciones digitales, combinando una interfaz moderna con una navegación clara y una identidad visual propia.</p>
+        <div class="case-tags"><span>Web Design</span><span>Development</span><span>Projects</span></div>
+        <a href="#" class="case-link">Ver proyecto <span class="arrow">→</span></a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT — tu próximo umbral
+     ============================================================ -->
+<section class="contact" id="contacto">
+  <div class="wrap contact-grid">
+
+    <div class="contact-info">
+      <div class="eyebrow reveal">Hablemos</div>
+      <h2 class="reveal" data-d="1" style="margin-top:1.2rem">Tu próximo umbral<br>empieza aquí</h2>
+      <p class="reveal" data-d="2">Cuéntanos tus ideas y objetivos. Estamos listos para ayudarte a cruzar el umbral hacia tu presencia digital.</p>
+
+      <div class="info-row reveal" data-d="2">
+        <span class="icon">✉</span>
+        <div><b>Correo</b><span>hola@umbralsolutions.com</span></div>
+      </div>
+      <div class="info-row reveal" data-d="3">
+        <span class="icon">☎</span>
+        <div><b>WhatsApp</b><span>+57 300 123 4567</span></div>
+      </div>
+      <div class="info-row reveal" data-d="3">
+        <span class="icon">⚲</span>
+        <div><b>Ubicación</b><span>Bogotá, Colombia</span></div>
+      </div>
+
+      <div class="socials reveal" data-d="4">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="Behance">Bē</a>
+      </div>
+    </div>
+
+    <form id="contactForm" novalidate class="reveal" data-d="1">
+      <div class="form-row">
+        <div class="field">
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+          <span class="field-error" data-for="nombre">Escribe tu nombre.</span>
+        </div>
+        <div class="field">
+          <input type="email" id="correo" name="email" placeholder="Correo electrónico" required>
+          <span class="field-error" data-for="correo">Ingresa un correo válido.</span>
+        </div>
+      </div>
+      <div class="field">
+        <input type="text" id="asunto" name="asunto" placeholder="Asunto" required>
+        <span class="field-error" data-for="asunto">Cuéntanos el asunto.</span>
+      </div>
+      <div class="field">
+        <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-solid submit-btn"><span>Enviar mensaje</span> <span class="arrow">→</span></button>
+      <p class="secure-note">🔒 Tu información está segura con nosotros.</p>
+      <p class="form-success" id="formSuccess" role="status">¡Gracias! Tu mensaje fue enviado, te contactaremos pronto.</p>
+    </form>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="logo" href="#" aria-label="Umbral Solutions">
+        <span class="logo-mark">
+          <svg viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20,116 L20,54 A30,30 0 0 1 80,54 L80,116" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+            <path d="M40,116 L40,44 A24,24 0 0 1 88,44 L88,108" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo-text"><b>UMBRAL</b><span>SOLUTIONS</span></span>
+      </a>
+      <div class="footer-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#planes">Planes</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-mark" aria-hidden="true">UMBRAL</div>
+  <div class="wrap">
+    <div class="footer-legal">
+      <span>© 2026 Umbral Solutions. Todos los derechos reservados.</span>
+      <span><a href="#" style="color:inherit">Política de privacidad</a> &nbsp;·&nbsp; <a href="#" style="color:inherit">Términos y condiciones</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

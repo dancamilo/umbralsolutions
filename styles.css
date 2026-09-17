@@ -337,46 +337,6 @@ h3{ font-size:1.15rem; font-weight:700; letter-spacing:-0.01em; }
 }
 .service:hover .s-arrow{ transform: translate(8px,-8px); color:var(--accent); }
 
-/* ============================================================
-   PLANS — asymmetric editorial tiers
-   ============================================================ */
-.plans{ padding: 7rem 0; background: linear-gradient(180deg, var(--bg), var(--bg-soft)); border-top:1px solid var(--border); }
-.plan-cards{ display:grid; grid-template-columns: 1fr 1.14fr 1fr; gap:1.4rem; align-items:stretch; }
-.plan-card{
-  position:relative; padding:2.6rem 2.2rem;
-  background: var(--surface);
-  border:1px solid var(--border); border-radius:16px;
-  display:flex; flex-direction:column;
-  transition: transform .5s var(--ease), border-color .5s, box-shadow .5s;
-}
-.plan-card:hover{ transform:translateY(-6px); border-color:var(--border-strong); box-shadow: 0 24px 60px -30px rgba(46,230,168,.25); }
-.plan-card.featured{ border-color:var(--border-strong); box-shadow: 0 0 70px -22px rgba(46,230,168,.3); }
-.badge{
-  position:absolute; top:-13px; left:2.2rem;
-  background:var(--accent); color:#06110d;
-  font-size:.62rem; font-weight:800; letter-spacing:.18em; text-transform:uppercase;
-  padding:.34rem .8rem; border-radius:999px;
-}
-.plan-icon{
-  font-size:.72rem; font-weight:700; letter-spacing:.24em; color:var(--accent);
-  margin-bottom:1.4rem;
-}
-.plan-card h3{ font-size:1.5rem; margin-bottom:.5rem; }
-.plan-card > p{ color:var(--text-dim); font-size:.92rem; margin-bottom:1.8rem; }
-.plan-list{ list-style:none; display:grid; gap:.7rem; margin-bottom:2rem; }
-.plan-list li{
-  font-size:.9rem; color:var(--text-dim);
-  padding-left:1.5rem; position:relative;
-}
-.plan-list li::before{
-  content:""; position:absolute; left:0; top:.55em;
-  width:7px; height:7px; border:1px solid var(--accent); border-radius:2px;
-  transform:rotate(45deg);
-}
-.plan-tag{
-  margin-top:auto; font-size:.68rem; letter-spacing:.2em; text-transform:uppercase;
-  color:var(--text-faint); border-top:1px solid var(--border); padding-top:1.2rem;
-}
 
 /* ============================================================
    PORTFOLIO — case studies
@@ -544,7 +504,6 @@ footer{ border-top:1px solid var(--border); padding:4rem 0 0; overflow:hidden; }
   .scene{ height:420px; order:-1; }
   .portal{ width:min(260px,64vw); }
   .hero-meta{ margin-top:2.5rem; }
-  .plan-cards{ grid-template-columns:1fr; max-width:520px; margin-inline:auto; }
   .contact-grid{ grid-template-columns:1fr; gap:3.5rem; }
 }
 @media (max-width: 860px){
@@ -577,8 +536,6 @@ footer{ border-top:1px solid var(--border); padding:4rem 0 0; overflow:hidden; }
 /* ---------- Tablets grandes / laptops pequeños ---------- */
 @media (max-width: 1180px){
   .wrap{ width:min(1040px, 92vw); }
-  .plan-cards{ grid-template-columns: 1fr 1fr 1fr; gap:1rem; }
-  .plan-card{ padding:2.2rem 1.6rem; }
 }
 
 /* ---------- Tablets (768px - 1020px) ya cubierto arriba, afinamos ---------- */
@@ -601,12 +558,9 @@ footer{ border-top:1px solid var(--border); padding:4rem 0 0; overflow:hidden; }
 
   .statement-sec{ padding: 6rem 0 5rem; }
   .services{ padding: 5rem 0 6rem; }
-  .plans{ padding: 5rem 0; }
   .work{ padding: 5rem 0 6rem; }
   .contact{ padding: 6rem 0 5rem; }
 
-  .plan-cards{ grid-template-columns: 1fr; max-width:480px; }
-  .plan-card:hover{ transform:none; }
 
   .service{ padding: 2rem 1rem; gap:1.2rem; }
   .s-desc{ grid-column: 1 / -1; margin-top:.8rem; }
@@ -644,8 +598,7 @@ footer{ border-top:1px solid var(--border); padding:4rem 0 0; overflow:hidden; }
   .service::before{ display:none; }
   .service:hover .s-title, .service:hover .s-num{ transform:none; }
 
-  .plan-card{ padding:1.8rem 1.4rem; }
-  .badge{ left:1.4rem; }
+  
 
   .case{ border-radius:14px; }
   .case-visual{ min-height:200px; }
@@ -672,7 +625,6 @@ footer{ border-top:1px solid var(--border); padding:4rem 0 0; overflow:hidden; }
 @media (max-width: 380px){
   h1{ font-size: 1.9rem; }
   .btn{ padding:.62rem 1rem; font-size:.76rem; }
-  .plan-card{ padding:1.5rem 1.1rem; }
   .case-body{ padding:1.3rem 1rem; }
   .monogram{ font-size:3rem; }
 }
